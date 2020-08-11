@@ -1,0 +1,427 @@
+/* ------------------------------Codificando index------------------------------*/
+.body {
+    background-color: #212529;
+}
+
+/* Estilos para en Navbar Lateral */
+.pt-0 {
+    padding-bottom: 0px! important;
+    margin-top: 10px;
+    border: 2px solid #43d3e8;
+}
+
+.navbar-brand-img {
+    max-height: 9rem! important;
+    padding-bottom: 0px;
+}
+
+.navbar-vertical .navbar-collapse:before {
+    margin-top: 0;
+}
+
+.bg-dark {
+    /* background-color: black! important; */
+    /* background: linear-gradient(87deg, #000 0, #778cff 100%) !important; */
+    padding-top: 0px;
+    color: #43d3e8! important;
+}
+
+.navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link {
+    color:#43d3e8;
+    font-weight: 700;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(87deg, #43d3e8 0, #5e72e4 100%);
+    /* background-color: #43d3e8; */
+    font-weight: 750;
+    transition: 0.5s;
+}
+
+/* Estilo del navbar superior */
+.main-content .navbar {
+    /* background: linear-gradient(87deg, #778cff 0, #43d3e8 100%) !important; */
+    background: #212529! important;
+    border-bottom: 2px solid #43d3e8;
+}
+
+.container-fluid .buscar {
+  width: 800px;
+}
+
+/* Estilo del Scroll */
+/* Estilos del contenedor */
+
+  .container p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  /* Tamaño del scroll */
+  .container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+   /* Estilos barra (thumb) de scroll */
+  .container::-webkit-scrollbar-thumb {
+    background: #5fc0cf;
+    border-radius: 4px;
+  }
+  
+  .container::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  
+   /* Estilos track de scroll */
+  .container::-webkit-scrollbar-track {
+    background: #43d2e800;
+    border-radius: 4px;
+  }
+  
+  .container::-webkit-scrollbar-track:hover, 
+  .container::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+  
+
+  /* Estilos para el contenido */
+  .bg-gradient-primary {
+    background: linear-gradient(87deg, #5e72e4 0, #000 100%) !important;
+}
+
+/* Estilos para el footer */
+.footer {
+    background: #212529;
+    padding: 2.5rem;
+}
+
+.card-header {
+  padding-bottom: 0px;
+}
+
+.card-header-resaltado {
+  margin-top: -20px;
+  height: 60px;
+  background: linear-gradient(-87deg, #4b66ff 0, #1de2ff 100%) !important;
+  box-shadow: 1px 5px 15px #a2a2a2;
+}
+.card-header-resaltado-2 {
+  margin-top: -20px;
+  height: 60px;
+  background: linear-gradient(90deg, #4b66ff 0, #1de2ff 100%) !important;
+  box-shadow: 1px 5px 15px #a2a2a2;
+}
+
+/* Efecto maquina de Escribir*/
+.contenedor-1,
+.contenedor-2,
+.contenedor-3 {
+	margin: auto;
+  display: table;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.contenedor-1 h3,
+.contenedor-2 h3,
+.contenedor-3 h3 { 
+	position: relative; 
+	float: left;
+	color: #5e72e4;
+}
+
+.contenedor-1 h3 span,
+.contenedor-2 h3 span,
+.contenedor-3 h3 span {
+    position:absolute;
+    right:0;
+    width:0;
+    background: #fff;
+    border-left: 1px solid #000;
+}
+
+.contenedor-1 h3 span {
+  animation: escribir 3s steps(30) infinite alternate-reverse;
+}
+
+.contenedor-2 h3 span {
+  animation: escribir 5s steps(30) infinite;
+}
+
+.contenedor-3 h3 span {
+  animation: escribir 5s steps(30) infinite alternate;
+}
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
+
+/*-------------Efectos Card Hover ----------*/
+.efecto-hover {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.efecto-hover .card {
+  position: relative;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  width: 30%;
+  margin: 30px 0;
+}
+
+.efecto-hover .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-87deg, #4b66ff 0, #1de2ff 100%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  border-radius: 8px;
+}
+
+.efecto-hover .card:hover .imgBx {
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: #1de2ff;
+}
+
+.efecto-hover .card .imgBx img {
+  max-width: 150px;
+  transition: 0.5s ease-in-out;
+}
+.efecto-hover .card:hover .imgBx img {
+  max-width: 120px;
+}
+
+
+.efecto-hover .card .content-efecto {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .efecto-hover {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .efecto-hover .card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 668px) {
+  .efecto-hover .card {
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+  .efecto-hover .card .imgBx {
+    position: relative;
+  }
+  .efecto-hover .card .imgBx,
+  .efecto-hover .card:hover .imgBx {
+    width: 100%;
+    height: 200px;
+    left: 0;
+  }
+
+  .efecto-hover .card .imgBx img,
+  .efecto-hover .card:hover .imgBx img {
+    max-width: 100px;
+  }
+  .efecto-hover .card .content-efecto {
+    position: relative;
+    width: 100%;
+  }
+}
+
+
+
+/*-----------------------Codificando Proyectos-------------------------*/
+
+.btn-expandir {
+  position: absolute;
+  font-size: 22px;
+  transition: .5s;
+  padding: 2px 5px;
+}
+
+.link-proyecto {
+ width: 318px;
+ height: 215px;
+}
+
+.link-proyecto:hover {
+  margin-top: -15px;
+  margin-left: -10px;
+  border-radius: 20px;
+ }
+
+.card-proyecto {
+  height: 280px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.card-proyecto .image-proyecto {
+  width: 100%;
+  height: 100%;
+}
+
+.image-proyecto {
+  margin-top: -15px;
+  margin-left: -10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.contenido {
+  margin-left: 30px;
+  font-weight: 700;
+}
+
+.contenido-2 {
+  margin-left: 40px;
+  font-weight: 500;
+  color: #808081;
+}
+.card-proyecto:hover .image-proyecto {
+  margin-top: 15px;
+  margin-left: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.card-proyecto:hover .btn-expandir {
+  margin-top: 25px;
+  margin-left: 20px;
+  transition: 0.5s;
+  border: 2px solid;
+}
+
+/*-------------------Codificando login----------------------------*/
+.bg-gradient-login {
+  background: linear-gradient(-87deg, #4b66ff 0, #000 90%)!important;
+}
+
+.bg-default .navbar {
+  background: linear-gradient(-87deg, #4b66ff 0, #000 90%)!important;
+}
+
+
+/*-------------------------Codificando Editor-------------------------*/
+#body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #1A1B1F;
+}
+
+#encabezados {
+  padding-top: 106px;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: 134px;
+}
+
+#encabezado-html, #encabezado-css, #encabezado-js {
+  margin-right: 5px;
+  margin-left: 8px;
+  width: 32.33%;
+  display: inline-block;
+  background: #000;
+}
+#encabezados .conf {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 0px;
+  border-radius: 6px;
+  width: 34px;
+  height: 24px;
+  background: #212529;
+  color: #FFF;
+}
+
+#encabezados .texto {
+  color: #6f6f6f;
+  font-size: larger;
+  font-weight: 900;
+}
+
+#encabezados .conf-2 {
+float: right;
+}
+
+#container-editor {
+  margin-top: 2px;
+  height: 310px;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.ace_gutter {
+  width: 30px! important;
+}
+#html-editor {
+  height: 100%;
+  margin-right: 5px;
+  margin-left: 8px;
+  min-height: 50vh;
+  width: 32.33%;
+  display: inline-block;
+}
+#css-editor {
+  height: 100%;
+  margin-right: 5px;
+  margin-left: 8px;
+
+  min-height: 50vh;
+  width: 32.33%;
+  display: inline-block;
+}
+#js-editor {
+  height: 100%;
+  margin-left: 8px;
+  min-height: 50vh;
+  width: 32.33%;
+  display: inline-block;
+}
+#resultado-editor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(30%);
+  top: 450px;
+  background: #141414;
+}

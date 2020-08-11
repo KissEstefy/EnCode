@@ -1,0 +1,108 @@
+<div class="main-content">
+    <!-- Navbar -->
+    <nav class=" navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark bg-gradient-login">
+        <div class="container px-4">
+        <a class="navbar-brand" href="index">
+            <img src="../../assets/img/brand/Icono3.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+             
+            <!-- Navbar items -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> 
+                    <a class="btn btn-primary  mt-2"  data-toggle="modal" data-target="#modalNuevaApp">
+                    <i class="ni ni-planet"></i>
+                    <span class="nav-link-inner--text">Salvar</span>
+                    </a>
+                </li>
+            <li class="nav-item">
+                <a class=" nav-link nav-link-icon" href="index">
+                <i class="ni ni-planet"></i>
+                <span class="nav-link-inner--text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="registrarse">
+                <i class="ni ni-circle-08"></i>
+                <span class="nav-link-inner--text">Registrarse</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="login">
+                <i class="ni ni-key-25"></i>
+                <span class="nav-link-inner--text">Login</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+</div> 
+
+
+<!-- <pre id="editor">function foo(items) {
+var i;
+for (i = 0; i &lt; items.length; i++) {
+    alert("Ace Rocks " + items[i]);
+}
+}
+</pre> -->
+
+<div id="encabezados">
+<div id="encabezado-html"> 
+    <button class="conf"><i class="fas fa-cog"></i></button>
+    <span class="texto">HTML</span>
+    <button class="conf conf-2"><i class="fas fa-caret-down"></i></button>
+</div>
+<div id="encabezado-css"> 
+    <button class="conf"><i class="fas fa-cog"></i></button>
+    <span class="texto">CSS</span>
+    <button class="conf conf-2"><i class="fas fa-caret-down"></i></button>
+</div>
+<div id="encabezado-js"> 
+    <button class="conf"><i class="fas fa-cog"></i></button>
+    <span class="texto">JS</span>
+    <button class="conf conf-2"><i class="fas fa-caret-down"></i></button>
+</div>
+</div>
+
+
+<div id="container-editor">
+<div id="html-editor"></div>
+<div id="css-editor"></div>
+<div id="js-editor"></div>
+</div>
+
+<iframe id="resultado-editor" frameborder="0"></iframe>
+
+
+ <!-- Modal Nueva Pluma-->
+  <div class="modal fade" id="modalNuevaApp" tabindex="-1" role="dialog" aria-labelledby="modalNuevaAppLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalNuevaAppLabel">Nueva Pluma</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <input class="form-control my-2" type="text" id="nombre-pluma" placeholder="Nombre Pluma">
+                      <input class="form-control my-2" type="text" id="Descripcion" placeholder="descripción">
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button id="btn-guardar" type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
