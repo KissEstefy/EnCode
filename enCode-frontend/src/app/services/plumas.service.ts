@@ -17,5 +17,5 @@ export class PlumasService {
   obtenerInfoPluma(pluma):Observable<any>{
     return this.httpClient.get(`http://localhost:8888/plumas/${pluma}`,{});
   }
- 
+  
 } 

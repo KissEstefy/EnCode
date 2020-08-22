@@ -50,7 +50,7 @@ router.get('/:idPluma', function (req, res) {
 }); 
 
 
-//Guardar plumas por usuario
+//Guardar plumas
 router.post('/pluma', function (req, res) {
     let plu = new pluma( 
         {

@@ -11,5 +11,9 @@ export class ProyectosService {
 
   obtenerProyectos():Observable<any>{
     return this.httpClient.get('http://localhost:8888/proyectos/mostrarProyectos',{});
+  } 
+
+  obtenerInfoProyecto(proyecto):Observable<any>{
+    return this.httpClient.get(`http://localhost:8888/proyectos/${proyecto}`,{});
   }
 }

@@ -65,9 +65,3 @@ function guardar() {
       });
       console.log(plumas);
 }
-
-//backendHost:string = 'http://localhost:8888';
-
-// function guardarUsuario() {
-
-// } 

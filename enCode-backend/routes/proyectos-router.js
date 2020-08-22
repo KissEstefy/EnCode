@@ -21,7 +21,34 @@ router.get('/mostrarProyectos',function (req, res){
 }); 
 
 
-//Guardar proyecto por usuario
+//Obtener proyecto por usuario
+router.get('/:idUsuario/proyecto', function (req, res) {
+    proyecto.find({_id: req.params.idUsuario})
+    .then(result=>{
+        res.send(result[0]);
+        res.end();
+    })
+    .catch(error=>{
+        res.send(error);
+        res.end();
+    })
+}); 
+
+
+//Obtener contenido de proyecto
+router.get('/:idProyecto', function (req, res) {
+    proyecto.find({_id: req.params.idProyecto})
+    .then(result=>{
+        res.send(result[0]);
+        res.end();
+    })
+    .catch(error=>{
+        res.send(error);
+        res.end();
+    })
+}); 
+
+//Guardar proyecto 
 router.post('/proyecto', function (req, res) {
     let plu = new proyecto( 
         {

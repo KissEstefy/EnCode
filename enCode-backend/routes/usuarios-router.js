@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var usuario = require('../models/usuario'); 
+//const jwb = require('jsonwebtoken');
 
 var usuarios = [];
 
@@ -20,6 +21,9 @@ router.post('/register', (req, res)=>{
             res.status(200).send('Usuario registrado exitosamente'); 
         }
     });
+
+    // const token = jwb.sign({_id: user._id}, 'secretKey');
+    // console.log(token);
 });
 
  
