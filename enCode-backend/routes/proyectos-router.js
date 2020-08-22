@@ -5,7 +5,7 @@ var proyecto = require('../models/proyecto');
 router.get('/', function (req, res) {
     res.send("Peticion recibida proyectos");
 });
-
+ 
 
 //Mostrar todas los proyectos
 router.get('/mostrarProyectos',function (req, res){
