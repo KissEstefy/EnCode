@@ -19,6 +19,8 @@ import { DetalleProyectoComponent } from './detalle-proyecto/detalle-proyecto.co
 import { PerfilComponent } from './perfil/perfil.component';
 import { PlumasComponent } from './plumas/plumas.component';
 import { DetallePlumaComponent } from './detalle-pluma/detalle-pluma.component';
+import { IndexComponent } from './index/index.component';
+import { NavbarLogueoComponent } from './navbar-logueo/navbar-logueo.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,12 @@ import { DetallePlumaComponent } from './detalle-pluma/detalle-pluma.component';
     DetalleProyectoComponent,
     PerfilComponent,
     PlumasComponent,
-    DetallePlumaComponent
+    DetallePlumaComponent,
+    IndexComponent,
+    NavbarLogueoComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,

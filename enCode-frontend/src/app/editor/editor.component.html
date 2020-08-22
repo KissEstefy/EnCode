@@ -71,14 +71,14 @@ for (i = 0; i &lt; items.length; i++) {
 
 
 <div id="container-editor">
-<div id="html-editor"></div>
-<div id="css-editor"></div>
-<div id="js-editor"></div>
+<div id="html-editor" [(ngModel)]="pluma.documentoHTML" ngDefaultControl></div>
+<div id="css-editor" [(ngModel)]="pluma.documentoCSS" ngDefaultControl></div>
+<div id="js-editor" [(ngModel)]="pluma.documentoJS" ngDefaultControl></div>
 </div>
 
 <iframe id="resultado-editor" frameborder="0"></iframe>
 
-
+ 
 
 
  <!-- Modal Nueva Pluma-->
@@ -95,16 +95,16 @@ for (i = 0; i &lt; items.length; i++) {
           <div class="container">
               <div class="row">
                   <div class="col-12">
-                      <input class="form-control my-2" type="text" id="nombre-pluma" placeholder="Nombre Pluma">
-                      <input class="form-control my-2" type="text" id="Descripcion" placeholder="descripción">
+                      <input class="form-control my-2" type="text" id="nombre-pluma" placeholder="Nombre Pluma" [(ngModel)]="pluma.tituloPluma">
+                      <input class="form-control my-2" type="text" id="descripcion" placeholder="descripción" [(ngModel)]="pluma.descripcion">
                   </div>
               </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button id="btn-guardar" type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+          <button id="btn-guardar" type="button" class="btn btn-primary" onclick="guardar()" (click)="guardarPluma()">Guardar</button>
         </div>
       </div>
-    </div>
+    </div> 
   </div>

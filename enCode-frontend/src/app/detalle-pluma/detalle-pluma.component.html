@@ -24,20 +24,49 @@
                 <span class="nav-link-inner--text">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="registrarse">
-                <i class="ni ni-circle-08"></i>
-                <span class="nav-link-inner--text">Registrarse</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="login">
-                <i class="ni ni-key-25"></i>
-                <span class="nav-link-inner--text">Login</span>
-                </a>
-            </li>
             </ul>
         </div>
+        <!-- User -->
+      <ul class="navbar-nav align-items-center d-none d-md-flex">
+        <li class="nav-item dropdown">
+          <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg">
+              </span>
+              <div class="media-body ml-2 d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+            <div class=" dropdown-header noti-title">
+              <h6 class="text-overflow m-0">Welcome!</h6>
+            </div>
+            <a href="perfil" class="dropdown-item">
+              <i class="ni ni-single-02"></i>
+              <span>Mi Perfil</span>
+            </a>
+            <a href="perfil" class="dropdown-item">
+              <i class="ni ni-settings-gear-65"></i>
+              <span>Configuraciones</span>
+            </a>
+            <a href="perfil" class="dropdown-item">
+              <i class="ni ni-calendar-grid-58"></i>
+              <span>Actividades</span>
+            </a>
+            <a href="perfil" class="dropdown-item">
+              <i class="ni ni-support-16"></i>
+              <span>Soporte</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="index" class="dropdown-item">
+              <i class="ni ni-user-run"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </li>
+      </ul>
         </div>
     </nav>
 </div> 
@@ -71,9 +100,9 @@ for (i = 0; i &lt; items.length; i++) {
 
 
 <div id="container-editor">
-<div id="html-editor"></div>
-<div id="css-editor"></div>
-<div id="js-editor"></div>
+<div id="html-editor">{{pluma.documentoHTML}}</div>
+<div id="css-editor">{{pluma.documentoCSS}}</div>
+<div id="js-editor">{{pluma.documentoJS}}</div>
 </div>
 
 <iframe id="resultado-editor" frameborder="0"></iframe>

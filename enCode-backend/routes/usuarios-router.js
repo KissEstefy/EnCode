@@ -5,7 +5,7 @@ var usuario = require('../models/usuario');
 var usuarios = [];
 
 router.get('/', function (req, res) {
-    res.send("Peticion recibida"); 
+    res.send("Peticion recibida usuarios"); 
 });
 
 
@@ -22,7 +22,7 @@ router.post('/register', (req, res)=>{
     });
 });
 
-
+ 
 router.post('/authenticate', (req, res)=>{
     const {email, password} = req.body;
 
@@ -47,6 +47,14 @@ router.post('/authenticate', (req, res)=>{
 
 });
 
+function isAuthenticated(req, res, next){
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login');
+}
+
+//Mostrar todos los usuarios
 router.get('/mostrar', (req, res)=>{
     usuario.find().then(result=>{
         res.send(result);

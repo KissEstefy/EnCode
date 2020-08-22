@@ -105,8 +105,8 @@
           </li>
           <h6 class="navbar-heading text-muted">Crece</h6>
           <li class="nav-item">
-              <a class="nav-link " href="index">
-                <i class="ni ni-pin-3 text-primary"></i> Trabajos
+              <a class="nav-link " href="perfil">
+                <i class="ni ni-pin-3 text-primary"></i> Perfil
               </a>
             </li>
         <li class="nav-item">
@@ -209,16 +209,16 @@
       </div>
       <div class="container-fluid mt--7">
           <div class="row">
-            <div class="col-xl-4 mb-5 mb-xl-0">
+            <div class="col-xl-4 mb-5 mb-xl-0" *ngFor="let proyecto of proyectos">
               <div class="card bg-gradient-default shadow card-proyecto" >
                 <a href="detalleProyecto" class="btn btn-expandir" ><i class="fas fa-expand-arrows-alt"></i>
                 </a>
-                <img src="../../assets/img/theme/react.jpg" class="image-proyecto" alt="..." onclick="www.google.com">
-                <div class="contenido" ><a href="detalleProyecto"> Titulo Proyecto</a></div>
-                <div class="contenido-2">Desarrollador</div>
+                <img src="../../assets/img/brand/fondo2.jpg" class="image-proyecto" alt="..." onclick="www.google.com">
+                <div class="contenido" ><a href="detalleProyecto">{{proyecto.tituloProyecto}}</a></div>
+                <div class="contenido-2">{{proyecto.descripcionProyecto}}</div>
               </div>
             </div>
-            <div class="col-xl-4 mb-5 mb-xl-0">
+            <!-- <div class="col-xl-4 mb-5 mb-xl-0">
                 <div class="card bg-gradient-default shadow card-proyecto">
                   <a href="detalleProyecto" class="btn btn-expandir"><i class="fas fa-expand-arrows-alt"></i>
                   </a>
@@ -235,7 +235,7 @@
                       <div class="contenido"><a href="detalleProyecto"> Titulo Proyecto</a></div>
                       <div class="contenido-2">Desarrollador</div>
                       </div>
-                  </div>
+                  </div> -->
                 </div>
           </div>
 

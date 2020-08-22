@@ -6,7 +6,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+ 
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="index">
         <img src="../../assets/img/brand/Icono3.png" class="navbar-brand-img" alt="...">
@@ -106,8 +106,8 @@
             </li>
             <h6 class="navbar-heading text-muted">Crece</h6>
             <li class="nav-item">
-                <a class="nav-link " href="index">
-                  <i class="ni ni-pin-3 text-primary"></i> Trabajos
+                <a class="nav-link " href="perfil">
+                  <i class="ni ni-pin-3 text-primary"></i> Perfil
                 </a>
               </li>
           <li class="nav-item">
@@ -208,17 +208,17 @@
     <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
       </div>
       <div class="container-fluid mt--7">
-          <div class="row" id="plumas">
-            <div class="col-xl-4 mb-5 mb-xl-0">
-              <div class="card bg-gradient-default shadow card-proyecto" >
+          <div class="row" id="plumas" >
+            <div class="col-xl-4 mb-5 mb-xl-0" *ngFor="let pluma of plumas" [ngValue]="pluma._id" ngDefaultControl>
+              <div class="card bg-gradient-default shadow card-proyecto"  (click)="mostrar(pluma._id)">
                 <a href="index" class="btn btn-expandir" ><i class="fas fa-expand-arrows-alt"></i>
                 </a>
-                <img src="../../assets/img/theme/sketch.jpg" class="image-proyecto" alt="..." onclick="www.google.com">
-                <div class="contenido" ><a href="detallePluma"> Titulo Proyecto</a></div>
-                <div class="contenido-2">Desarrollador</div>
+                <img src="../../assets/img/brand/plumas.jpg" class="image-proyecto" alt="...">
+                <div class="contenido" ><a href="detallePluma" > {{pluma.tituloPluma}}</a></div>
+                <div class="contenido-2">{{pluma.descripcionPluma}}</div>
               </div>
             </div> 
-            <div class="col-xl-4 mb-5 mb-xl-0">
+            <!-- <div class="col-xl-4 mb-5 mb-xl-0">
                 <div class="card bg-gradient-default shadow card-proyecto">
                   <a href="index" class="btn btn-expandir"><i class="fas fa-expand-arrows-alt"></i>
                   </a>
@@ -235,7 +235,7 @@
                       <div class="contenido"><a href="detallePluma"> Titulo Proyecyo</a></div>
                       <div class="contenido-2">Desarrollador</div>
                       </div>
-                  </div>
+                  </div> -->
                 </div>
           </div>
   
@@ -266,3 +266,4 @@
             </div>
           </footer>
   </div>
+  

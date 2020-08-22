@@ -29,16 +29,18 @@ export class LoginComponent implements OnInit {
   //     swal(res, "You clicked the button!", "success")
   //   });
   // }
-  
+   
   
   logeo(){
     this.httpClient.post('http://localhost:8888/authenticate', this.usuario, {responseType: 'text'})
     .subscribe(
     res => {
         swal(res, "You clicked the button!", "success")
-        },
+      setTimeout(function(){window.location.href = '/index.html'; }, 1800)        
+      },
     err =>  {
       swal ( "Ups" ,  err.error ,  "error")
+
     });
   }
 

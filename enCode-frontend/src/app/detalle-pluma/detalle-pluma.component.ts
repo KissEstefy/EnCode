@@ -9,22 +9,36 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./detalle-pluma.component.css']
 })
 export class DetallePlumaComponent implements OnInit {
-
   plumas:any = [];
     pluma:any = {
-    tituloPluma: 'Emily',
-    descripcion: 'emily@gmail.com',
-    documentoHTML: "Documento HTML 1",
-    documentoCSS: "Documento CSS 1",
-    documentoJS: "Documento JS 1"
+    tituloPluma: '',
+    descripcion: '',
+    documentoHTML: `<h1>Hola Mundo</h1>
+<p>Esto es una Prueba de Plumas</p>
+<div id="func"></div>`,
+    documentoCSS: `body{
+    background: #FFF;
+    color: #5e72e4;
+  }
+  p {
+    color:red;
+  }
+  `,
+    documentoJS: `function hola(){
+    document.getElementById('func').innerHTML = 
+    "<h3>hola</h3>";
+}
+hola();
+`
   }
 
   constructor(private _CargarScript:CargarScriptService) { 
     _CargarScript.Carga(["controlador/controlador"]);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {    
+    
+    }
 
   guarda(){
     console.log(this.pluma.tituloPluma);

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IndexComponent } from './index/index.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProyectosComponent } from './proyectos/proyectos.component'
 import { DetalleProyectoComponent } from './detalle-proyecto/detalle-proyecto.component';
@@ -17,12 +18,16 @@ import { DetallePlumaComponent } from './detalle-pluma/detalle-pluma.component'
 const routes: Routes = [
   {
     path: 'index', 
-    component: DashboardComponent
+    component: IndexComponent
   },
   {
     path: '', 
-    redirectTo: '/index', 
+    redirectTo: 'index', 
     pathMatch: 'full'
+  },
+  {
+    path: 'dashboard', 
+    component: DashboardComponent
   },
   {
     path: 'proyectos', 

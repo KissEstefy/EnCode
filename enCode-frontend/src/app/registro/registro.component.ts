@@ -36,7 +36,8 @@ export class RegistroComponent implements OnInit {
     .subscribe(
     res => {
         swal(res, "You clicked the button!", "success")
-        },
+        setTimeout(function(){window.location.href = '/index.html'; }, 1800)        
+      },
     err =>  {
       swal ( "Ups" ,  err.error ,  "error")
     });

@@ -66,26 +66,8 @@ function guardar() {
       console.log(plumas);
 }
 
-backendHost:string = 'http://localhost:8888';
+//backendHost:string = 'http://localhost:8888';
 
 // function guardarUsuario() {
 
 // } 
-
-function mostrarPlumas(){
-    document.getElementById('plumas').innerHTML += 
-    ` 
-    <div class="col-xl-4 mb-5 mb-xl-0">
-        <div class="card bg-gradient-default shadow card-proyecto" >
-        <a href="index" class="btn btn-expandir" ><i class="fas fa-expand-arrows-alt"></i>
-        </a>
-        <img src="../../assets/img/theme/sketch.jpg" class="image-proyecto" alt="..." onclick="www.google.com">
-        <div class="contenido" ><a href="detallePluma"> Titulo Proyecto</a></div>
-        <div class="contenido-2">Desarrollador</div>
-        </div>
-    </div> 
-    ` ;
-    console.log('nweubf');
-}
-
-mostrarPlumas();
