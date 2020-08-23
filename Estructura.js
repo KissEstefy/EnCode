@@ -1,11 +1,10 @@
+
+// Crea la base de datos y sus colleciones
 use enCode;
 db.createCollection('usuarios');
 db.createCollection('plumas');
 db.createCollection('proyectos');
 
-
-usuario: emily@gmail.com
-contraseña: emily
 
 //Insertar Usuarios
 db.usuarios.insertMany([
@@ -63,25 +62,6 @@ db.usuarios.insertMany([
 
 
 
-
-//Insertar Plumas
-db.plumas.insertMany([{
-    "tituloPluma":"Pluma Prueba",
-    "descripcionPluma":"descripcion de pluma",
-    "documentoHTML":"Documento HTML",
-    "documentoCSS":"Documento CSS",
-    "documentoJS":"Documento JS"
-},
-{
-    "tituloPluma":"Pluma Conexión",
-    "descripcionPluma":"descripcion de pluma",
-    "documentoHTML":"Documento HTML",
-    "documentoCSS":"Documento CSS",
-    "documentoJS":"Documento JS"
-}
-])
-
-
 //Insertar Proyectos
 db.proyectos.insertMany([{
     "tituloProyecto": "Proyecto Prueba",
@@ -98,3 +78,41 @@ db.proyectos.insertMany([{
     "documentosJS": []
 }
 ])
+
+//Insertar Plumas
+db.plumas.insertMany([{
+    "tituloPluma":"Pluma Prueba",
+    "descripcionPluma":"descripcion de pluma",
+    "documentoHTML":"Documento HTML",
+    "documentoCSS":"Documento CSS",
+    "documentoJS":"Documento JS"
+},
+{
+    "tituloPluma":"Pluma Conexión",
+    "descripcionPluma":"descripcion de pluma",
+    "documentoHTML":"Documento HTML",
+    "documentoCSS":"Documento CSS",
+    "documentoJS":"Documento JS"
+},
+{
+    "tituloPluma":"Pluma Prueba",
+    "descripcionPluma":"descripcion de pluma",
+    "documentoHTML": 'App 18',
+    "documentoCSS": 'img/app-icons/18.webp',
+    "documentoJS": 'Desarrollador 16',
+},
+{
+    "tituloPluma":"Pluma Prueba",
+    "descripcionPluma":"descripcion de pluma",
+    "documentoHTML": 'h1 {↵    color:red;↵}',
+    "documentoCSS": '<div id="contenedor"></div>',
+    "documentoJS": 'function hola(){↵    document.getElementById("contenedor").innerHTML += ↵        `  ↵        <h1>Hola</h1>↵        `; ↵}↵hola();'
+}
+])
+
+
+
+//Uno de los usuarios que registrados:
+    //Quedo como valor estatico solo para evitar que lo tenga que escribir 
+    usuario: emily@gmail.com
+    contraseña: emily
